@@ -16,6 +16,7 @@ export const User = ({count,setCount,name}) =>{
             })}</p>
             <button onClick={increase}>Increase</button>
             <p>{name}</p>
+            <p>today ended with props and useState</p>
         </>
     )
 }
