@@ -21,3 +21,8 @@
 .yellow{
   background-color: yellow;
 }
+.containerCard{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

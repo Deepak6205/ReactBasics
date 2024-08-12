@@ -7,6 +7,7 @@ import { ChangeColor } from './component/ChangeColor';
 import { Accordian } from './component/Accordian';
 import { User } from './component/User';
 import { useState } from 'react';
+import LearnEffects from './component/LearnEffects';
 
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
         {/* <ConditionalRender/>
         <ChangeColor/> */}
         {/* <Accordian/> */}
-        <User count={count} setCount={setCount} name={name}/>
+        {/* <User count={count} setCount={setCount} name={name}/> */}
+        <LearnEffects/>
     </div>
   );
 }
