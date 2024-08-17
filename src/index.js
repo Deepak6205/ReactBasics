@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import { BrowserRouter,Route,Routes } from "react-router-dom";
 import LearnEffects from './component/LearnEffects';
+import { ProductDetails } from './component/ProductDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,8 +12,8 @@ root.render(
     <BrowserRouter>
     <Routes>
     <Route exact path="/" element={<LearnEffects />} />
-    {/* <Route exact path="/productDetails" element={<ProductDetails/>} />
-    <Route exact path="/user" element={ <User count={count} setCount={setCount} name={name}/>}/> */}
+     <Route exact path="/productDetails" element={<ProductDetails/>} />
+    {/* // <Route exact path="/user" element={ <User count={count} setCount={setCount} name={name}/>}/>  */}
 
     </Routes>
     </BrowserRouter>  
