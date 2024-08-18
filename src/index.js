@@ -12,7 +12,7 @@ root.render(
     <BrowserRouter>
     <Routes>
     <Route exact path="/" element={<LearnEffects />} />
-     <Route exact path="/productDetails" element={<ProductDetails/>} />
+     <Route exact path="/productDetails/:id" element={<ProductDetails/>} />
     {/* // <Route exact path="/user" element={ <User count={count} setCount={setCount} name={name}/>}/>  */}
 
     </Routes>

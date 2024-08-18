@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const LearnEffects = () => {
   const [api, setApi] = useState([]);
   const[loader,setLoader] = useState(false);
-// const navigate = useNavigate();
+ const navigate = useNavigate();
   const fetching = async () => {
     setLoader(true);
     try{
@@ -28,7 +28,8 @@ const LearnEffects = () => {
     <div className="containerCard">
        {api.map((data) => {
         return (
-          <div className="card">
+          <div className="card" key={data.id}>
+            
             <img alt="abc"
               src={data.image}
               style={{ height: "150px", width: "150px" }}
@@ -37,7 +38,9 @@ const LearnEffects = () => {
             <p>{data.description.slice
                 (0,5)+'...'}</p>
             <p>{data.price}</p>
-            <button className="btn" >view Details</button>
+            <button className="btn" onClick={()=>{
+              navigate(`productDetails/${data.id}`)
+            }}>view Details</button>
           </div>
         );
       })}
