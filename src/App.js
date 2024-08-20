@@ -11,6 +11,8 @@ import { User } from './component/User';
 import { useState } from 'react';
 import LearnEffects from './component/LearnEffects';
 import { ProductDetails } from './component/ProductDetails';
+import { Navbar } from './component/Navbar';
+import { Homework } from './component/Homework';
 
 
 function App() {
@@ -22,10 +24,11 @@ function App() {
         {/* <Rahul/> */}
         {/* <ConditionalRender/>
         <ChangeColor/> */}
-        {/* <Accordian/> */}
+        {/* <Accordian/>  */}
         {/* <User count={count} setCount={setCount} name={name}/>   */}
-        <LearnEffects/>
-        
+        {/* <LearnEffects/> */}
+        {/* <Navbar/> */}
+        {/* <Homework/> */}
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Shimmer } from "./Shimmer";
 import { useNavigate } from "react-router-dom";
+import { Navbar } from "./Navbar";
 const LearnEffects = () => {
   const [api, setApi] = useState([]);
   const[loader,setLoader] = useState(false);
@@ -14,7 +15,7 @@ const LearnEffects = () => {
       console.log(getData);
     }catch(err){
       console.log(err);
-    } finally{setLoader(false)}
+    } 
     
   };
   useEffect(() => {
@@ -25,7 +26,14 @@ const LearnEffects = () => {
     return <Shimmer/>
   }
   return (
+    <div className="parent">
+    <div>{<Navbar/>}</div>
+    <div className="center">
+      <input type="search" placeholder="Search"></input>
+    </div>
+    
     <div className="containerCard">
+      
        {api.map((data) => {
         return (
           <div className="card" key={data.id}>
@@ -44,6 +52,7 @@ const LearnEffects = () => {
           </div>
         );
       })}
+    </div>
     </div>
     // logic no. 1
     // Logic no.2 try catch wala part hai uper mai 

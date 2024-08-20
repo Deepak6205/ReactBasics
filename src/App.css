@@ -55,3 +55,113 @@
   justify-content: space-between;
   gap: 20px;
 }
+.childOne{
+  display: flex;
+  margin-left: 20px;
+  gap: 30px;
+  align-items: center;
+}
+.childOne p{
+  cursor: pointer;
+}
+.nav{
+  color: beige;
+  background-color: skyblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.childTwo img{
+  height: 30px;
+  width: 30px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.center img{
+  width: 30px;
+  margin-left: -50px;
+}
+ input{ 
+  border: none;
+  
+  padding: 10px;
+  border-radius: 30px;
+  width: 500px;
+  border: 3px solid #ccc;
+}
+.cardParent{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  
+}
+.child{
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 320px;
+  height: 320px;
+}
+.child img{
+  width: 180px;
+  height: 180px;
+}
+.child button{
+  background: rgb(3, 233, 3);
+  border-radius: 4px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+  color: white;
+}
+.shimmerCard{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  background: #373535;
+}
+.dummyCard{
+  display: flex;
+  
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 220px;
+  height: 220px;
+  background-color: #373535;
+  border-radius: 8px;
+}
+.dummyCard button{
+  width: 200px;
+  height: 15px;
+  margin-top: 10px;
+  background: #353333;
+  border: none;
+  border-radius: 5px;
+}
+.singleProduct{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 25px;
+  
+  
+}
+.productContainer{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  
+}

@@ -3,7 +3,7 @@ import {  useParams } from 'react-router-dom';
 
 export const ProductDetails = () => {
   const[details,setDetails] = useState({});
-  let  userId  = useParams();
+  const  userId  = useParams();
   console.log(userId.id)
   const fetching = async () => {
     
