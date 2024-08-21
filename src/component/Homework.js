@@ -6,11 +6,12 @@ import { useNavigate } from 'react-router';
 export const Homework = () => {
     const[api,setApi] = useState([]);
     const [loader,setLoader] = useState(false);
+    const[filtervalue,setFiltervalue] = useState("");
     const navigate = useNavigate();
     const fetching = async () =>{
         setLoader(true);
         try{
-            const getApiData = await fetch("https://fakestoreapi.com/products");
+            const getApiData = await fetch(`https://fakestoreapi.com/products?sort=${filtervalue}`);
             const getData = await getApiData.json();
             setApi(getData);
             console.log(getData);
@@ -19,19 +20,34 @@ export const Homework = () => {
             console.log(error);
         }finally{setLoader(false)}
     };
+    const handleFilter = (action)=>{
+        if(action === 'asc'){
+            setFiltervalue(action);
+        }else{
+            setFiltervalue(action);
+        }
+    }
     useEffect(()=>{
         fetching()
-    },[]);
+    },[filtervalue]);
     if(loader){
        return <Shimmer/>       
     }
   return (
     <div className='Parent'>
-        <div>{<Navbar/>}</div>
+        <div>
+            <Navbar/>
+            
+        </div>
         <div className="center">
             <input type="search" placeholder="Search"></input>
             <img alt='g' src='https://cdn0.iconfinder.com/data/icons/art-designing-glyph/2048/1871_-_Magnifier-512.png'/>
+            
         </div>
+            <div className='sideBtn'>
+                <button className='btn'onClick={()=>handleFilter('asc')}>Ascending</button>
+                <button className='btn' onClick={()=>handleFilter('desc')}>Descending</button>
+            </div>
     <div className='cardParent'>
         {api.map((data) => {
             return(

@@ -1,13 +1,15 @@
 import React from 'react'
-import { Navigate } from 'react-router'
+
 import { Homework } from './Homework';
+import { useNavigate } from "react-router-dom";
 export const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <div className='nav'>
         <div className='childOne'>
             <h2>YourShop</h2>
             <p onClick={()=>{
-              Navigate(`/${<Homework/>}`);
+              navigate(`/`);
             }}>Home</p>
         </div>
         <div className='childTwo'>

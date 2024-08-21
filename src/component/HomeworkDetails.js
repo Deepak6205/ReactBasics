@@ -36,7 +36,7 @@ export const HomeworkDetails = () => {
           <h3>{product.title}</h3>
           <p>{product.description}</p>
           <p>{product.price}</p>
-          <button>buy now</button>
+          <button className='btn'>buy now</button>
         </div>
         </div>  
       </div>

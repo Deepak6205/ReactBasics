@@ -89,7 +89,6 @@
 }
  input{ 
   border: none;
-  
   padding: 10px;
   border-radius: 30px;
   width: 500px;
@@ -164,4 +163,12 @@
   justify-content: space-between;
   gap: 25px;
   
+}
+.sideBtn{
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  position: absolute;
+  right: 15px;
+  top: 65px;
 }
