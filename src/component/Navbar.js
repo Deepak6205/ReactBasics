@@ -11,6 +11,7 @@ export const Navbar = () => {
             <p onClick={()=>{
               navigate(`/`);
             }}>Home</p>
+            {/* <Link to="/"> helllo</Link> */}
         </div>
         <div className='childTwo'>
             <img alt='c' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqX_j2HFD4MwAWl5_IZxdFZrVjjxvWRhovI3UdXbsTAa7azcDe4kIf74XFuEfATjIh4HI&usqp=CAU'/>
