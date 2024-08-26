@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Homework } from './Homework';
 import { useNavigate } from "react-router-dom";
-export const Navbar = () => {
+export const Navbar = ({fetching}) => {
   const navigate = useNavigate();
   return (
     <div className='nav'>
@@ -10,6 +10,7 @@ export const Navbar = () => {
             <h2>YourShop</h2>
             <p onClick={()=>{
               navigate(`/`);
+              fetching();
             }}>Home</p>
             {/* <Link to="/"> helllo</Link> */}
         </div>

@@ -57,7 +57,7 @@ export const Homework = () => {
   return (
     <div className="Parent">
       <div>
-        <Navbar />
+        <Navbar fetching = {fetching}/>
       </div>
       <div className="center">
         <div></div>
@@ -72,7 +72,7 @@ export const Homework = () => {
         </div>
 
         <div className="sideBtn">
-          <SelectMenu setSelect={setSelect} />
+          <SelectMenu  setSelect={setSelect} />
           <button className="btn" onClick={() => handleFilter("asc")}>
             Ascending
           </button>
