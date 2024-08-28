@@ -63,7 +63,7 @@ export const Homework = () => {
         <div></div>
         <div>
           <div className="flex-center">
-            <input type="search" placeholder="Search"></input>
+            <input type="search" placeholder="Search" className="search-input"/>
             <img
               alt="g"
               src="https://cdn0.iconfinder.com/data/icons/art-designing-glyph/2048/1871_-_Magnifier-512.png"

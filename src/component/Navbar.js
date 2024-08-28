@@ -2,15 +2,14 @@ import React from 'react'
 
 import { Homework } from './Homework';
 import { useNavigate } from "react-router-dom";
-export const Navbar = ({fetching}) => {
+export const Navbar = () => {
   const navigate = useNavigate();
   return (
     <div className='nav'>
         <div className='childOne'>
             <h2>YourShop</h2>
             <p onClick={()=>{
-              navigate(`/`);
-              fetching();
+              navigate(`/home`);
             }}>Home</p>
             {/* <Link to="/"> helllo</Link> */}
         </div>

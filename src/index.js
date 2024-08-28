@@ -8,13 +8,15 @@ import { ProductDetails } from './component/ProductDetails';
 import { Navbar } from './component/Navbar';
 import { Homework } from './component/Homework';
 import { HomeworkDetails } from './component/HomeworkDetails';
+import { Login } from './component/Login';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     //<App/>
     <BrowserRouter>
         <Routes>
-        <Route exact path="/" element={<Homework />} />
+        <Route exact path="/" element={<Login />} />
+        <Route exact path="/home" element={<Homework />} />
         <Route exact path="/homeworkDetails/:id" element={<HomeworkDetails/>} />
             {/* <Route exact path="/" element={<LearnEffects />} />
             <Route exact path="/productDetails/:id" element={<ProductDetails/>} /> */}
