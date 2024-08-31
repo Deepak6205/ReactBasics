@@ -9,7 +9,7 @@ export const Navbar = () => {
         <div className='childOne'>
             <h2>YourShop</h2>
             <p onClick={()=>{
-              navigate(`/home`);
+              navigate(`/homework`);
             }}>Home</p>
             {/* <Link to="/"> helllo</Link> */}
         </div>

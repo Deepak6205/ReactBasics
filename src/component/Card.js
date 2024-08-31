@@ -14,7 +14,7 @@ export const Card = ({ api }) => {
             <p>Rating = {data.rating.rate}</p>
             <button
               onClick={() => {
-                navigate(`HomeworkDetails/${data.id}`);
+                navigate(`/homework/homeworkDetails/${data.id}`);
               }}
             >
               Add to Cart

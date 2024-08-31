@@ -3,12 +3,14 @@ import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { LoaderNew } from "./LoaderNew";
 import Button from '@mui/material/Button';
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 export const Login = () => {
   const [input, setInput] = useState("");
   const [password, setPassword] = useState("");
   const [visibility,setvisibility] = useState(true);
   const[loader,setLoader] = useState(false);
-
+  const navigate = useNavigate();
   const fetchinglogin = async () => {
     setLoader(true);
     try {
@@ -25,8 +27,19 @@ export const Login = () => {
       })
         // const jsonData = await loginData.json();
         // console.log(jsonData);
-        .then((res) => res.json())
-        .then((json) => console.log(json));
+        .then((res) => {
+          if(res.status === 200){
+            navigate("/homework");
+            toast.success("Congratulations baby you are in")
+          }
+          if(res.status === 401){
+            toast.error("Invalid username and password");
+          }
+        })
+        
+        .then((json) => {
+          
+        });
     } catch (error) {
       console.log(error);
     }finally{
