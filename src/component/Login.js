@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import HttpsOutlinedIcon from '@mui/icons-material/HttpsOutlined';
 import { LoaderNew } from "./LoaderNew";
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+
 export const Login = () => {
   const [input, setInput] = useState("");
   const [password, setPassword] = useState("");
@@ -59,16 +62,16 @@ export const Login = () => {
             fetchinglogin()
           }}>
             <div className="user">
-              <img alt="usericon" src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" style={{width:"24px", height:"24px"}}/>
-              <input type="text" id="userName" placeholder="username" required onChange={(e)=>{
+              <PersonOutlineOutlinedIcon/>
+              <input type="text" id="userName" placeholder="Username" required onChange={(e)=>{
                 setInput(e.target.value);
                 
               }}/>
             </div>
 
             <div className="password">
-              <img alt="usericon" src="https://w7.pngwing.com/pngs/975/821/png-transparent-password-manager-computer-icons-password-strength-password-safe-chang-miscellaneous-password-strength-password-safe-thumbnail.png" style={{width:"24px", height:"24px"}}/>
-              <input type={!visibility ? "text" : "password"} id="password" placeholder="password" required onChange={(e)=>{
+            <HttpsOutlinedIcon/>
+              <input type={!visibility ? "text" : "password"} id="password" placeholder="Password" required onChange={(e)=>{
                 setPassword(e.target.value);
                 
               }}/>
@@ -76,22 +79,22 @@ export const Login = () => {
                 : <VisibilityOffIcon onClick={()=>setvisibility(true)}/>}
             </div>
             <div className="login-btn">
-            <Button variant="contained" type="submit" >{!loader ? "Login" : <LoaderNew/>}</Button>
+            <Button variant="contained" type="submit" >{!loader ? "Login now" : <LoaderNew/>}</Button>
             </div>
           </form>
         </div>
         
         <div className="login-links">
           <div>
-            <hr/>
-            <p>Login with others</p>
+            
+            <p>Login with others </p>
           </div>  
           <div className="google">
             <img alt="google" src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-09-512.png" style={{width:"30px", height:"30px"}}/>
             <button className="g-btn">Login with google</button>
           </div>
           <div className="facebook">
-            <img alt="facebook" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwD0GVoucdBDsZvP6GDwB700bReUXpsEKA7A&s" style={{width:"30px", height:"30px"}}/>
+            <img alt="facebook" src="https://img.icons8.com/?size=64&id=msQ6HdxpqUmi&format=png" style={{width:"30px", height:"30px"}}/>
             <button className="f-btn">Login with facebook</button>
           </div>
         </div>
@@ -99,7 +102,24 @@ export const Login = () => {
 
 
 
-      <div className="img-section"></div>
+      <div className="img-section">
+        <div className="bg-img">
+          <img  alt="bg" src="https://png.pngtree.com/png-vector/20240415/ourmid/pngtree-creased-paper-texture-in-black-and-white-captivating-transparent-background-image-png-image_11931106.png"/> 
+        </div>
+      
+        <div className="w-png"> 
+          <div className="small-img">
+          <div className="spark">
+            <img alt="spark" src="https://png.pngtree.com/png-vector/20220816/ourmid/pngtree-lightning-thunderbolt-electricity-logo-design-template-spark-flash-arrow-vector-png-image_38438620.png"/>
+          </div>
+            <div className="htext">
+              <h2>waiting for you Login Now!!!</h2>
+            </div>
+          <img alt="png" src="https://www.bmc.com/content/dam/bmc/solutions/personas/pn-next-gen-practictioner-female.png" style={{width:"200px"}}/>
+          </div>
+          
+        </div>
+      </div>
     </div>
   );
 };

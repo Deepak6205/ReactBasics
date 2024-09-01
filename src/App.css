@@ -195,6 +195,13 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 /*----------------------- login section---------------------- */
+
+.login-Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .form-section{
   display: flex;
   flex-direction: column;
@@ -203,7 +210,7 @@
   width: 364px;
   height: 469px;
   line-height: 20px;
-  background: #b4effa;
+  
 }
 .text{
   display: flex;
@@ -228,13 +235,121 @@
 }
 .user{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border-radius: 10px;
+  width: 100%;
+  background: #F0EDFFCC;
+}
+.user input{
+  border: none;
+  background: #F0EDFFCC;
+  outline: none;
+  
 }
 .password{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border-radius: 10px;
+  width: 100%;
   margin: 10px;
+  background: #F0EDFFCC;
+  
+}
+.password input{
+  border: none;
+  background: #F0EDFFCC;
+  outline: none;
 }
 
+.login-btn button{
+  background: linear-gradient(99.78deg, #9181F4 -5.85%, #5038ED 109.55%);
+  box-shadow: 0px 8px 21px 0px #00000029;
+  border-radius: 8px;
+}
+.google{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 250px;
+  border-radius: 10px;
+  margin: 10px;
+  
+  border: 1px solid #F0EDFF
+}
+.google button{
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+}
+.facebook{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  width: 250px;
+  border-radius: 10px;
+  margin: 10px;  
+  border: 1px solid #F0EDFF;
+}
+.facebook button{
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
 
+/* ------- login imagesection-------- */
+.img-section{
+display: flex;
+width: 683px;
+height: 603px;
+gap: 0px;
+opacity: 0px;
+background: linear-gradient(217.64deg, #9181F4 -5.84%, #5038ED 106.73%);
+position: relative;
+border-radius: 50px;
+}
+.bg-img img{
+width: 683px;
+height: 603px;
+border-radius: 50px;
+}
+.w-png{
+  width:785px;
+  height:524px;
+  
+}
+.small-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 324px;
+  background: linear-gradient(217.64deg, #c9c3f4 -5.84%, #413d5a 106.73%);
+  border-radius: 12px;
+  position: absolute;
+  left: 255px;
+  top: 122px;
+}
+.htext{
+margin-bottom: 50px;
+color: #ffff;
+margin-left: 50px;
+
+}
+.spark img{
+  width: 79px;
+  height:79px;
+  border-radius: 50%;
+  background:#ffff
+  
+}
 /* --------------Loader------------ */
 /* From Uiverse.io by Fernando-sv */ 
 .loader {
